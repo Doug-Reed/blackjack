@@ -8,6 +8,10 @@ public class Hand {
     public void addToHand(Card c) {
         hand.add(c);
     }
+
+    public int size(){
+        return hand.size();
+    }
     @Override
     public String toString() {
         String retVal = "";
