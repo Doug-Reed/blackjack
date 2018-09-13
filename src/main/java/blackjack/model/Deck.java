@@ -7,6 +7,9 @@ public class Deck {
 
     private ArrayList<Card> cards = new ArrayList<Card>();
     private int cardIndex = 0;
+    public ArrayList<Card> getCards() {
+        return cards;
+    }
 
     public void addCards(ArrayList<Card> theCards) {
         cards.addAll(theCards);

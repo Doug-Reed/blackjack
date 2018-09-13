@@ -1,8 +1,18 @@
 package blackjack.model;
 
 import java.util.ArrayList;
+import blackjack.model.Deck;
 
 public class CardFactory {
+
+    public Deck getSixDecks() {
+        Deck shoe = new Deck();
+        for(int x=1; x <7; x++){
+            Deck d = getFullDeck();
+            shoe.addCards(d.getCards());
+        }
+        return shoe;
+    }
     public Deck getFullDeck() {
         ArrayList<Card> cardStack = new ArrayList<Card>();
         for (Suit s : Suit.values()) {
