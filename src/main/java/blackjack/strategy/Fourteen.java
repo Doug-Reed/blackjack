@@ -11,46 +11,38 @@ import blackjack.model.Hand;
 import blackjack.rules.HouseRules;
 import blackjack.model.Card;
 
-public class Thirteen implements StrategyChart {
+public class Fourteen implements StrategyChart {
 
-    private String description = "Player 13";
+    private String description = "Player 14";
 
     public String description() {
         return description;
     }
 
     public PlayerAction correctPlay(HouseRules rules, DiscardTray tray, Hand playerHand, Card dealerUpcard) {
-        //Soft 13
+        //Soft 14
         if (playerHand.isSoft()) {
             if (playerHand.firstTwoCards()) {
-                if (dealerUpcard.getValue() == 5 || dealerUpcard.getValue() == 6) {
-                    description = "Soft 13 doubles v. 5 or 6.";
+                if ( dealerUpcard.getValue() == 5 || dealerUpcard.getValue() == 6) {
+                    description = "Soft 14 doubles v. 5 or 6.";
                     return new DOUBLE();
                 }
             }
 
-            description = "Soft 13 hits v. everything except 5 or 6.";
+            description = "Soft 14 hits v. everything except 5 or 6.";
             return new HIT();
         }
         
-        //Hard 13
+        //Hard 14
         if (!playerHand.isSoft()) {
-           if(dealerUpcard.getValue()==2) {
-               description = "13 hits v. at a true -1 or lower.";
-               if(tray.trueCount() <= (-1)) {
-                   return new HIT();
-               } else {
-                   return new STAND();
-               }
-           }
 
            if(dealerUpcard.getValue() <=6) {
-               description = "13 stands vr 6 or less.";
+               description = "14 stands vr 6 or less.";
                return new STAND();
            }
 
            if(dealerUpcard.getValue() >6) {
-               description = "13 hits vs 7 or higher.";
+               description = "14 hits vs 7 or higher.";
                return new HIT();
            }
 
