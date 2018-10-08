@@ -20,6 +20,11 @@ public class Sixteen implements StrategyChart {
     }
 
     public PlayerAction correctPlay(HouseRules rules, DiscardTray tray, Hand playerHand, Card dealerUpcard) {
+        if(playerHand.isPair()) {
+            description = "Always split 8s.";
+            return new SPLIT();
+        }
+
         //Soft 16
         if (playerHand.isSoft()) {
             if (playerHand.firstTwoCards()) {

@@ -35,6 +35,13 @@ public class Fourteen implements StrategyChart {
         
         //Hard 14
         if (!playerHand.isSoft()) {
+           
+           if (playerHand.isPair()) {
+               description = "7's split vs. 7 or less."
+               if(dealerUpcard.getValue() <= 7) {
+                   return new SPLIT();
+               }
+           }
 
            if(dealerUpcard.getValue() <=6) {
                description = "14 stands vr 6 or less.";
