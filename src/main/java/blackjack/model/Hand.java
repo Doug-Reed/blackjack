@@ -10,6 +10,10 @@ public class Hand {
         hand.add(c);
     }
 
+    public Card dealerUpcard() {
+        return hand.get(1);
+    }
+
     public boolean firstTwoCards() {
         if(hand.size() ==2) {
             return true;

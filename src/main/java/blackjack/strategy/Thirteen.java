@@ -36,7 +36,7 @@ public class Thirteen implements StrategyChart {
         //Hard 13
         if (!playerHand.isSoft()) {
            if(dealerUpcard.getValue()==2) {
-               description = "13 hits v. at a true -1 or lower.";
+               description = "13 hits v. 2 at a true -1 or lower.";
                if(tray.trueCount() <= (-1)) {
                    return new HIT();
                } else {

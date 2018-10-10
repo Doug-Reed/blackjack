@@ -12,8 +12,7 @@ public class Seat {
         this.player = player;
         return this;
     }
-
-    public Card hit() {
-        
+    public Table getTable(){
+        return table;
     }
 }
