@@ -9,5 +9,7 @@ public interface Player {
      public int numberOfHands();
      public Hand hand(int whichHand);
 
+     public void resetHand();
+
     public PlayerAction action(int whichHand);
 }

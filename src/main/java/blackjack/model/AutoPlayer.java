@@ -27,7 +27,10 @@ public class AutoPlayer implements Player {
          bet += resolveBet;
          bankroll += bet;
      }
-
+     public void resetHand() {
+         hand = new Hand[1];
+         hand[0] = new Hand();
+     }
      public AutoPlayer() {
          betSpread = new BetSpread();
          bankroll = 1000;

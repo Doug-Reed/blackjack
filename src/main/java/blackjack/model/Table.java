@@ -13,6 +13,9 @@ public class Table {
         
     }
 
+    public Card draw() {
+        return shoe.draw();
+    }
     public Seat[] getSeats() {
         return seats;
     }
