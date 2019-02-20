@@ -16,7 +16,7 @@ public class DiscardTray {
     }
 
     public int trueCount() {
-        double decksDiscardedExact = discarded.length()/ 52;
+        double decksDiscardedExact = discarded.size()/ 52;
         int decksDiscardedFloored = (int) decksDiscardedExact;
 
         double rawDivide = runningCount()/decksDiscardedFloored;

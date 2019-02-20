@@ -42,7 +42,7 @@ public class AutoPlayer implements Player {
         StrategyChart strategyChart =  StrategyChartFactory.getCorrectPlay(hand[whichHand]);
         Table thisTable = seat.getTable();
         PlayerAction playerAction = strategyChart.correctPlay(thisTable.getRules(), thisTable.getDiscardTray(), hand[whichHand], thisTable.getDealer().dealerUpcard());
-            
+        return playerAction;    
     }
 
      public int numberOfHands() {

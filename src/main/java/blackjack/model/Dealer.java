@@ -35,8 +35,9 @@ public class Dealer {
 
     public Hand selectHand() {
         for(Seat seat: table.getSeats()) {
-           
+           return null;
         }
+        return null;
     }
     public Card dealerUpcard() {
         return hand.dealerUpcard();

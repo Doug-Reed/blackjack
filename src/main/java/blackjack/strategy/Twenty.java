@@ -1,6 +1,7 @@
 package blackjack.strategy;
 import blackjack.action.PlayerAction;
 import blackjack.action.STAND;
+import blackjack.action.SPLIT;
 import blackjack.model.DiscardTray;
 import blackjack.model.Hand;
 import blackjack.rules.HouseRules;

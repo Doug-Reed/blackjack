@@ -45,7 +45,7 @@ public class Eighteen implements StrategyChart {
     if(!playerHand.isSoft())
     {
         if(playerHand.isPair()) {
-            if(dealerUpcard.getValue== 7 || dealerUpcard >= 10) {
+            if(dealerUpcard.getValue()== 7 || dealerUpcard.getValue() >= 10) {
                 description = "Pair of 9's stands against 7, 10, Ace.";
                 return new STAND();
             } else {
