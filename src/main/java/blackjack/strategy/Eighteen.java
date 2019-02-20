@@ -4,6 +4,7 @@ import blackjack.action.DOUBLE;
 import blackjack.action.HIT;
 import blackjack.action.PlayerAction;
 import blackjack.action.STAND;
+import blackjack.action.SPLIT;
 import blackjack.model.DiscardTray;
 import blackjack.model.Hand;
 import blackjack.rules.HouseRules;
@@ -45,10 +46,10 @@ public class Eighteen implements StrategyChart {
     {
         if(playerHand.isPair()) {
             if(dealerUpcard.getValue== 7 || dealerUpcard >= 10) {
-                description = "Pair of 9's stands against 7, 10, Ace."
+                description = "Pair of 9's stands against 7, 10, Ace.";
                 return new STAND();
             } else {
-                description = "Pair of 9s splits against everything but 7, 10, Ace."
+                description = "Pair of 9s splits against everything but 7, 10, Ace.";
                 return new SPLIT();
             }
         }
