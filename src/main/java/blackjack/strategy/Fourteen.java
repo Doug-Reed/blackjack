@@ -4,6 +4,7 @@ package blackjack.strategy;
 
 import blackjack.action.DOUBLE;
 import blackjack.action.HIT;
+import blackjack.action.SPLIT;
 import blackjack.action.PlayerAction;
 import blackjack.action.STAND;
 import blackjack.model.DiscardTray;
@@ -37,7 +38,7 @@ public class Fourteen implements StrategyChart {
         if (!playerHand.isSoft()) {
            
            if (playerHand.isPair()) {
-               description = "7's split vs. 7 or less."
+               description = "7's split vs. 7 or less.";
                if(dealerUpcard.getValue() <= 7) {
                    return new SPLIT();
                }

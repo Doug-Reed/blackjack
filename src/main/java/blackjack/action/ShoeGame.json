@@ -1,0 +1,35 @@
+{
+    "initiate": {
+        "1": {
+            "perPlayer": "DEAL_1_FACEUP",
+            "toDealer": "DEAL_1_FACEDOWN"
+        },
+        "2": {
+            "perPlayer": "DEAL_1_FACEUP",
+            "toDealer": "DEAL_1_FACEUP"
+        }
+    },
+    "round": {
+        "1": {
+            "perPlayer": "AWAIT_PLAYER_ACTION",
+            "repeatUntil": {
+                "playerActionEquals": [
+                    "STAND",
+                    "BUST"
+                ]
+            }
+        },
+        "2": {
+            "toDealer": "PLAY_DEALER_HAND",
+            "repeatUntil": {
+                "dealerActionEquals": [
+                    "STAND",
+                    "BUST"
+                ]
+            }
+        },
+        "3": {
+            "perPlayer": "PAYOUT"
+        }
+    }
+}

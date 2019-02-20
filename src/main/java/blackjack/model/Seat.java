@@ -9,6 +9,18 @@ public class Seat {
         this.table = table;
     }
 
+    public boolean hasPlayer() {
+        if(player instanceof Player) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public Player getPlayer() {
+        return this.player; 
+    }
+
     public Seat sit(Player player) {
         this.player = player;
         return this;
