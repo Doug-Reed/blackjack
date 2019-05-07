@@ -42,7 +42,7 @@ public class StrategyChartFactory {
             case 21:
                 return new TwentyOne();                                               
             default:
-                return null;
+                return new Bust();
         }
     }
 }

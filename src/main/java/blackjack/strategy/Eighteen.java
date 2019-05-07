@@ -41,7 +41,7 @@ public class Eighteen implements StrategyChart {
             }
         }
 
-    //Hard 17
+    //Hard 18
     if(!playerHand.isSoft())
     {
         if(playerHand.isPair()) {

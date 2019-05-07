@@ -7,6 +7,10 @@ public class Deck {
 
     private ArrayList<Card> cards = new ArrayList<Card>();
     private int cardIndex = 0;
+
+    public void reset() {
+        cardIndex = 0;
+    }
     public ArrayList<Card> getCards() {
         return cards;
     }

@@ -5,7 +5,17 @@ import java.util.ArrayList;
 public class Hand {
     private ArrayList<Card> hand = new ArrayList<Card>();
     private boolean soft = false;
+    private boolean canSplit = true;
+    private boolean resolved = false;
+    private double bet;
 
+    public void setBet(double bet) {
+        this.bet = bet;
+    }
+
+    public double getBet() {
+        return this.bet;
+    }
     public void addToHand(Card c) {
         hand.add(c);
     }
@@ -27,8 +37,15 @@ public class Hand {
          return this.soft;
     }
 
-    public boolean isPair() {
+    public void noSplit(){
+        canSplit = false;
+    }
 
+    public boolean isPair() {
+        if(!canSplit) {
+            return false;
+        }
+        
         if (hand.size() != 2) {
             return false;
         }
@@ -84,6 +101,19 @@ public class Hand {
         }
 
         return value;
+    }
+
+    public void resolveHand(){
+        resolved = true;
+    }
+    public boolean isResolved(){
+        return resolved;
+    }
+
+    public Card removeCard(){
+        Card c = hand.get(1);
+        hand.remove(c);
+        return c;
     }
 
 }
